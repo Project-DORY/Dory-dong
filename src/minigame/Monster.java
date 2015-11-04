@@ -5,7 +5,9 @@ public class Monster {
 	int ATK = 10;
 	int INT = 8;
 	int DEF = 3;
-	int exp = 101;
+	int exp = 55;
+	int condition = 0;
+	int condition_index = 0;
 
 	double SKILL() {
 		double damage;

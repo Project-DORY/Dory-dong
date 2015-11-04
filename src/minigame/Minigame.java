@@ -14,6 +14,11 @@ public class Minigame {
 		Random random = new Random();
 		Character ch = new Character();
 		Monster mt = new Monster();
+		
+		view.printSystemMessage("캐릭터의 이름을 설정해 주세요 : ");
+		String chname = sc.nextLine();
+		ch.Charactername = chname;
+		
 		view.printSystemMessageln("적이 나타났다! 전투를 시작합니다.");
 
 		while (ch.HP > 0 && mt.HP > 0) {	
