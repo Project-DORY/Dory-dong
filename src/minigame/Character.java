@@ -6,6 +6,11 @@ public class Character {
 	int ATK = 25;
 	int INT = 15;
 	int DEF = 5;
+	int LEVEL = 1;
+	int EXP_L = 1000;
+	int EXP_P = 0;
+	int MAX_LEVEL = 10;
+	
 
 	double SKILL1() {
 		double damage;
@@ -21,5 +26,32 @@ public class Character {
 		heal = INT * 1.1;
 
 		return heal;
+	}
+	
+	void Get_Exp(int exp) {
+		if(LEVEL < MAX_LEVEL) {
+			EXP_P += exp;
+			return;
+		}
+		else return;
+	}
+	
+	void Check_levelup() {
+		if(EXP_P < EXP_L) {
+			return;
+		}
+		
+		else if(EXP_P >= EXP_L) {
+			LEVEL++;
+			
+			if(LEVEL < MAX_LEVEL) {
+				EXP_P = 0;
+				EXP_L = LEVEL * 1000;
+				return;
+			} else if(LEVEL == MAX_LEVEL) {
+				EXP_L = 0;
+				return;
+			}
+		}
 	}
 }
