@@ -97,11 +97,20 @@ public class Minigame {
 			}
 			else if(mt.HP < 0) {
 				view.printSystemMessageln("적에게 승리하였다! 경험치를 획득했어!");
+				ch.Get_Exp(mt.exp);
+				ch.Check_levelup();
 			}
 			else if(mt.HP < 0) {
 				view.printSystemMessageln("동시에 쓰러지다니, 분하다...");
 			}
 		}
+		
+		view.printSystemMessage("현재 경험치 : ");
+		view.printSystemMessageFormat("%d", ch.EXP_P);
+		view.printSystemMessageln(" ");
+		view.printSystemMessage("현재 레벨 : ");
+		view.printSystemMessageFormat("%d",  ch.LEVEL);
+		view.printSystemMessageln(" ");
 		
 		return;
 	}
