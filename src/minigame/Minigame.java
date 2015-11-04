@@ -112,6 +112,7 @@ public class Minigame {
 		view.printSystemMessageFormat("%d",  ch.LEVEL);
 		view.printSystemMessageln(" ");
 		
+		sc.close();
 		return;
 	}
 }
