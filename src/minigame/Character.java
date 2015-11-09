@@ -5,7 +5,8 @@ import textview.TextView;
 public class Character {
 	public static IView view = new TextView();
 	
-	String Charactername = null;
+	String name = null;
+	String skillist[] = null;
 	public double HP = 300.0;
 	final double MAX_HP = 300.0;
 	int ATK = 25;
@@ -19,6 +20,7 @@ public class Character {
 	int defsustain = 0;
 	int skillpoint = 3;
 	int statuspoint = 3;
+	int job = 0;
 
 	double SKILL1() {
 		double damage;
