@@ -1,42 +1,25 @@
 package minigame;
 
 public class Skill {
-	double cut(int ATK) {
-		String skname = "cut";
-		double damage = 0;
-		
-		damage += ATK * 1.2;
-		
-		return damage;
+	String name;
+	double damage;
+	double healing;
+	int sustain;
+	public Skill(String name, double damage, double healing, int sustain) {
+		super();
+		this.name = name;
+		this.damage = damage;
+		this.healing = healing;
+		this.sustain = sustain;
 	}
 	
-	double stab(int ATK) {
-		String skname = "stab";
-		double damage = 0;
-		
-		damage += ATK * 0.8;
-		
-		return damage;
+	
+	int getFinalDamage(int atk) {
+		return (int) (atk * damage);
 	}
 	
-	double heal(int INT) {
-		String skname = "heal";
-		double healling = 0;
-		
-		healling += INT * 0.4;
-		
-		return healling;
+	int getFinalHealing(int smt) {
+		return (int) (smt * healing);
 	}
 	
-	int magicsword() {
-		String skname = "magicsword";
-		int sustain = 3;
-		return 15;
-	}
-	
-	int protector() {
-		String skname = "protector";
-		int sustain = 2;
-		return 20;
-	}
 }
